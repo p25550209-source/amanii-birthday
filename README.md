@@ -1,1 +1,127 @@
-# amanii-birthday
+# amanii-birthday<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Aman 🎂</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff4b8b, #7b2ff7);
+      color: white;
+    }
+
+    .card {
+      width: 90%;
+      max-width: 500px;
+      padding: 40px 25px;
+      text-align: center;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+    }
+
+    .cake {
+      font-size: 70px;
+      animation: bounce 1.5s infinite;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin: 15px 0;
+    }
+
+    p {
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      background: white;
+      color: #ff3d81;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      transform: scale(1.08);
+    }
+
+    #surprise {
+      display: none;
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .balloon {
+      position: absolute;
+      font-size: 45px;
+      animation: float 6s linear infinite;
+    }
+
+    .b1 { left: 10%; bottom: -80px; animation-delay: 0s; }
+    .b2 { left: 80%; bottom: -80px; animation-delay: 2s; }
+    .b3 { left: 45%; bottom: -80px; animation-delay: 4s; }
+
+    @keyframes bounce {
+      50% { transform: translateY(-15px); }
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-120vh); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="balloon b1">🎈</div>
+  <div class="balloon b2">🎈</div>
+  <div class="balloon b3">🎈</div>
+
+  <div class="card">
+    <div class="cake">🎂</div>
+
+    <h1>Happy Birthday Aman! 🎉</h1>
+
+    <p>
+      Wishing you a very Happy Birthday! 🥳
+      May your day be filled with happiness,
+      laughter, love and unforgettable memories. ❤️
+    </p>
+
+    <button onclick="showSurprise()">🎁 Click for Surprise</button>
+
+    <div id="surprise">
+      ✨ You are an amazing person, Aman! ❤️<br>
+      Have the BEST birthday ever! 🎂🎉
+    </div>
+  </div>
+
+  <script>
+    function showSurprise() {
+      document.getElementById("surprise").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
